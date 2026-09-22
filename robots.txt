@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adityatayade19.github.io/sitemap.xml
+Sitemap: https://adityatayade.com/sitemap.xml
