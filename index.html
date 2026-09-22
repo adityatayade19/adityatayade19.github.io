@@ -197,12 +197,18 @@
     gap: 3rem;
     padding-block: clamp(3rem, 7vw, 6rem) clamp(3rem, 6vw, 5rem);
   }
+  .eyebrow {
+    font-size: 1.0625rem;
+    color: var(--muted);
+    margin-bottom: -1.5rem;
+  }
+  .eyebrow strong { color: var(--ink); font-weight: 600; }
   .hero h1 {
-    font-size: clamp(2.6rem, 1rem + 6.5vw, 7rem);
+    font-size: clamp(2.25rem, 1rem + 4.5vw, 4.75rem);
     font-weight: 700;
-    line-height: 0.98;
+    line-height: 1.02;
     letter-spacing: -0.02em;
-    max-width: 20ch;
+    max-width: 28ch;
     text-wrap: balance;
   }
   .hero-row {
@@ -309,20 +315,40 @@
   }
   .engagement .note { margin-top: 1.5rem; font-size: 1.125rem; color: var(--muted); }
   .contact {
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem 0 0;
     display: flex;
     flex-direction: column;
-    gap: 1.125rem;
-    padding-top: 0.75rem;
+    gap: 2rem;
   }
-  .contact .email {
+  .contact a {
+    display: grid;
+    grid-template-columns: 1.75rem minmax(0, 1fr);
+    gap: 0.25rem 1rem;
+    align-items: start;
+    color: var(--ink);
+  }
+  .contact a:hover { text-decoration: none; }
+  .contact a:hover .cta { color: var(--accent-hover); }
+  .contact svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    grid-row: 1 / span 2;
+    margin-top: 0.125rem;
+    color: var(--accent);
+  }
+  .contact .cta {
     font-family: var(--display);
     font-weight: 600;
-    font-size: clamp(1.375rem, 1rem + 1.3vw, 2rem);
+    font-size: clamp(1.25rem, 1rem + 0.8vw, 1.625rem);
     line-height: 1.2;
+  }
+  .contact .target {
+    color: var(--muted);
+    font-size: 1rem;
     overflow-wrap: anywhere;
   }
-  .contact a:not(.email) { color: var(--ink); font-size: 1.125rem; }
-  .contact a:not(.email):hover { color: var(--accent-hover); }
 
   .site-footer {
     display: flex;
@@ -383,10 +409,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="wrap site-header">
-  <a class="brand" href="#top" aria-label="Aditya Tayade, home">
-    <span class="mark" aria-hidden="true">AT</span>
-    <span>Aditya Tayade</span>
-  </a>
+  <a class="brand" href="#top" aria-label="Aditya Tayade, home">Aditya Tayade</a>
   <nav class="nav" aria-label="Site">
     <a class="nav-links" href="#problems">Problems</a>
     <a class="nav-links" href="#record">Track record</a>
@@ -398,10 +421,11 @@
 <main id="main">
 
   <section class="wrap hero" id="top">
-    <h1>Bought a capital markets platform? I make it work inside your bank.</h1>
+    <p class="eyebrow"><strong>Aditya Tayade</strong> — capital markets platform business analyst, Dubai</p>
+    <h1>I find out what the business meant, not just what it said. Then I make sure it’s delivered, not just planned.</h1>
     <div class="hero-row">
       <div class="lede">
-        <p>Structured products, equity derivatives, fixed income and FX. Working from Dubai with banks in any timezone. Establishing what the platform can actually deliver, what has to be built around it, and how it connects to the rest of the bank.</p>
+        <p>One person on your platform team, not a firm. Ten years on bank platform teams — eight implementations from the vendor side, then a bank-side contract assessing the same class of platform. Structured products, equity derivatives, fixed income and FX, from Dubai in any timezone.</p>
         <div class="actions">
           <a class="btn" href="mailto:aditya.tayade94@gmail.com">Email Aditya</a>
           <a class="btn-outline" href="cv.pdf">Download CV</a>
@@ -497,14 +521,32 @@
 
   <section class="wrap section engagement" id="engagement">
     <div>
-      <h2>Available for scoped assessments, fixed-fee deliverables and multi-month retainers.</h2>
-      <p class="note">Available for new engagements from October 2026. Remote from Dubai, any timezone. Direct engagement or through your integrator.</p>
+      <h2>I join platform teams on contract, on retainer, or on staff.</h2>
+      <p class="note">Available from October 2026. Remote from Dubai in any timezone, or on site. Directly, or through your integrator.</p>
     </div>
-    <div class="contact">
-      <a class="email" href="mailto:aditya.tayade94@gmail.com">aditya.tayade94@gmail.com</a>
-      <a href="https://www.linkedin.com/in/aditya-tayade-consultant" rel="me">LinkedIn</a>
-      <a href="cv.pdf">Download CV (PDF)</a>
-    </div>
+    <ul class="contact">
+      <li>
+        <a href="mailto:aditya.tayade94@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span class="cta">Tell me about the platform problem. I read and reply myself.</span>
+          <span class="target">aditya.tayade94@gmail.com</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/aditya-tayade-consultant" rel="me">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+          <span class="cta">Let’s connect on LinkedIn.</span>
+          <span class="target">linkedin.com/in/aditya-tayade-consultant</span>
+        </a>
+      </li>
+      <li>
+        <a href="cv.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+          <span class="cta">The full detail, in two pages.</span>
+          <span class="target">Download CV (PDF)</span>
+        </a>
+      </li>
+    </ul>
   </section>
 
 </main>
